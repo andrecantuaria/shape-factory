@@ -13,13 +13,14 @@
     <title>Shape Factory</title>
 
     <!-- Stylesheets -->
-    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./assets/style/index.css" media="all">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,400;0,6..12,500;1,6..12,500&family=Playball&family=Roboto+Mono:wght@300;400;500;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+     <!-- Scripts-->
+     <script src="./assets/script/index.js" defer></script>
 </head>
 
 <body>
@@ -32,23 +33,27 @@
                 <div class="form-container">
                     <select class="shape">
                         <option value="" selected="" disabled="" hidden="">Shape</option>
-                        <option value="09f">Circle</option>
-                        <option value="9f0">Square</option>
-
+                        <option value="circle">Circle</option>
+                        <option value="square">Square</option>
+                        <option value="triangle">Triangle</option>
                     </select>
                     <select class="color">
                         <option value="" selected="" disabled="" hidden="">Color</option>
-                        <option value="09f">Blue</option>
-                        <option value="9f0">Green</option>
-                        <option value="f09">Green</option>
-                        <option value="90f">Green</option>
+                        <option value="var(--app-blu)">Blue</option>
+                        <option value="var(--app-green)">Green</option>
+                        <option value="var(--app-orange)">Orange</option>
+                        <option value="var(--app-pink)">Pink</option>
+                        <option value="var(--app-purple")>Purple</option>
                     </select>
                     <input class="create" type="button" value="Create">
+                    <input class="disable-btn" type="button" value="Create" disabled>
                 </div>
                 <div class="container-output">
                     <div class="output">
-                    </div>
                 </div>
+            </div>
+            <div>
+                <p class="info"></p>
             </div>
         </div>
     </main>

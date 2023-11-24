@@ -56,6 +56,14 @@ h1 {
   line-height: 2;
 }
 
+p {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--app-white);
+  letter-spacing: 0.4px;
+  line-height: 2;
+}
+
 .form-container {
   display: flex;
   flex-direction: row;
@@ -91,32 +99,57 @@ select {
   background-color: #ffaa00;
 }
 
+.disable-btn {
+  flex: 0 0 auto;
+  height: 40px;
+  width: 150px;
+  background-color: #727272;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .container-output {
-    width: 680px;
-    height: 580px;
+    width: 640px;
+    height: 535px;
     background-color: var(--app-medium-gray);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Alinha a .output no fundo da .container-output */
-    padding: 10px; /* Adiciona espaço interno */
+    justify-content: flex-end;
   }
   
   .output {
-    max-width: 680px;
-    max-height: 580px;
-    align-self: center;
+    max-width: 640px;
+    max-height: 560px;
+    align-self: left;
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: flex-start;
     align-items: flex-end;
-    padding: 10px;
-    margin-top: auto; /* Alinha no fundo verticalmente */
+    margin-top: auto; 
+    margin-left: 10px;
   }
   
   .circle {
-    width: 96px;
-    height: 96px;
+    width: 95px;
+    height: 95px;
     border-radius: 50%;
-    background-color: #f90;
     margin: 0 10px 10px 0;
-  }
+}
+
+.square {
+    width: 95px;
+    height: 95px;
+    border-radius: 0; 
+    margin: 0 10px 10px 0;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 47.5px solid transparent;
+  border-right: 47.5px solid transparent;
+  border-bottom: 82.3px solid transparent; 
+  margin: 0 10px 10px 0;
+}
