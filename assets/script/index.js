@@ -1,10 +1,39 @@
 'use strict';
 
-import { onEvent, select } from "./uf.js";
-import { Shape } from './classes.js';
+//import { onEvent, select } from "./uf.js";
+//import { Shape } from './classes.js';
 
-// Main Code
 
+
+// Utility functions
+function onEvent(event, selector, callback) {
+    return selector.addEventListener(event, callback);
+}
+
+function select(selector, parent = document) {
+    return parent.querySelector(selector);
+}
+
+class Shape {
+    constructor(name, color) {
+        this._name = name;
+        this._color = color;
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    get color() {
+        return this._color;
+    }
+
+    getInfo() {
+        return `Shape: ${this._name}, Color: ${this._color}`;
+    }
+}
+
+// Main Cod
 const shape = select('.shape');
 const color = select('.color');
 const createBtn = select('.create');
